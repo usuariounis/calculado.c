@@ -1,0 +1,46 @@
+#include <stdio.h>
+int main (void)
+{
+	do {
+	int op, dg1, dg2;
+	int c = 1;
+	float resultado;
+	do
+	{
+		printf("Qual operação deseja realizar?\n 1: Somar\n 2: Subtrair\n 3: Multiplicar\n 4: Dividir\n 5: Sair\n");
+		scanf("%i",&op);
+		if (op == 5 )
+		{	
+			return 0;
+		}
+		if (op > 5 ||op<1)
+		{
+			printf("Operação inválida \n");
+		}
+		
+	}
+	while (op > 5 || op < 1);
+	printf("Dígito 1: \n");
+	scanf("%i", &dg1);
+	printf("Dígito 2: \n");
+	scanf("%i", &dg2);
+
+	switch (op)
+	{
+		case 1 :
+		resultado = dg1 + dg2;
+		break;
+		case 2 :
+		resultado = dg1 - dg2;
+		break;
+		case 3 :
+		resultado = dg1 * dg2;
+		break;
+		case 4 :
+		resultado = dg1/dg2;
+		break;
+	}
+	printf("Resultado: %f", resultado);
+}
+while (c=1);
+}
